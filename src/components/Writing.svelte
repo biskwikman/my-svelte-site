@@ -55,8 +55,20 @@
         </a>
     </div>
     <div class="item">
+        <a href="https://medium.com/@djosephhenri/creating-a-population-density-map-of-toyota-city-japan-using-d3-geos-cli-and-some-other-stuff-4bbfb73f37e5">
+            <h1 class="title">Creating a Population Density Map of Toyota City, Japan - Pt 3</h1>
+            <p>Medium - 2018.14.03</p>
+        </a>
+    </div>
+    <div class="item">
+        <a href="https://medium.com/@djosephhenri/creating-a-population-density-map-of-toyota-city-japan-using-d3-geos-cli-and-some-other-stuff-396c5b6dc225">
+            <h1 class="title">Creating a Population Density Map of Toyota City, Japan - Pt 2</h1>
+            <p>Medium - 2018.13.03</p>
+        </a>
+    </div>
+    <div class="item">
         <a href="https://medium.com/@djosephhenri/creating-a-population-density-map-of-toyota-city-japan-using-d3-geos-cli-and-some-other-stuff-705632a55e8f">
-            <h1 class="title">Creating a Population Density Map of Toyota City, Japan</h1>
+            <h1 class="title">Creating a Population Density Map of Toyota City, Japan - Pt 1</h1>
             <p>Medium - 2018.03.03</p>
         </a>
     </div>
