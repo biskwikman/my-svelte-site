@@ -26,10 +26,12 @@
     };
     const ausDetentionProps = {
         backgroundImage:'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/aus-immi-detention-map-bw-en.png',
-        backgroundSize: '120%'
+        backgroundSize: '120%',
+        projectLink: 'https://qiita.com/biskwikman/items/b1b6865f2515ffc00eec'
     };
     const humeHousingProps = {
-        backgroundImage: 'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/hume-map.png'
+        backgroundImage: 'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/hume-map.png',
+        projectLink: 'https://www.humehousingmap.org/'
     };
 
 </script>
