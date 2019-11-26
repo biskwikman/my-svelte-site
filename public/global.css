@@ -55,16 +55,6 @@ input[type="range"] {
 	height: 0;
 }
 
-button {
-	color: #333;
-	background-color: #f4f4f4;
-	outline: none;
-}
-
-button:active {
-	background-color: #ddd;
-}
-
-button:focus {
-	border-color: #666;
+button::-moz-focus-inner{
+	border: 0;
 }
