@@ -2,6 +2,8 @@
     export let backgroundImage;
     export let backgroundSize;
     export let projectLink;
+    export let titleEng;
+    export let titleJpn;
 </script>
 
 <style>
@@ -26,7 +28,45 @@
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 100%
+    height: 100%;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    display: flex;
+}
+
+.overlay:hover {
+    background-color: rgba(128, 128, 128, 0.8);
+}
+
+.text-fade {
+    color: white;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-fade:hover {
+    opacity: 1;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    margin: 0 0;
+    padding: 0.5vh 0;
+    font-size: 1.2em;
+    opacity: 1;
 }
 
 </style>
@@ -36,6 +76,9 @@
         <div class="thumbnail" 
             style="background-image: url({backgroundImage});
                 background-size: {backgroundSize}">
+            <div class="overlay">
+                <div class="text-fade"><p>{titleEng}<p/><p>{titleJpn}</p></div>
+            </div>
         </div>
     </a>
 </div>

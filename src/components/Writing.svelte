@@ -13,7 +13,7 @@
 
     .item{
         margin-left: 20vw;
-        margin-top: 3vh;
+        margin-bottom: 3vh;
     }
 
     .title{
