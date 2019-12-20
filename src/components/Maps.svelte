@@ -47,6 +47,12 @@
         titleEng: 'Hume Housing Change Map',
         titleJpn: 'ヒューム市の住宅変更'
     };
+    const japanInternalMigration = {
+        backgroundImage: 'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/japan-internal-migration.png',
+        projectLink: 'https://observablehq.com/@biskwikman/japan-intra-prefectural-migration-map',
+        titleEng: 'Japan Internal Migration',
+        titleJpn: '日本国内純移動数'
+    }
 
 </script>
 
@@ -71,4 +77,5 @@
     <MapTile {...jpnBigThree}/>
     <MapTile {...ausDetentionProps}/>
     <MapTile {...humeHousingProps}/>
+    <MapTile {...japanInternalMigration}/>
 </div>
