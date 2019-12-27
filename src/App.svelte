@@ -1,5 +1,6 @@
 <script>
 	import Header from './components/Header.svelte';
+	import Footer from './components/Footer.svelte';
 	import Writing from './components/Writing.svelte';
 	import Maps from './components/Maps.svelte'
 	
@@ -22,12 +23,20 @@
 </script>
 
 <style>
+
+	.body {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
 	.main-buttons {
+		flex: 1 0 auto;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		text-align: center;
-		align-items: center;
+		align-items: flex-start;
 		padding-top: 5vh;
 	}
 
@@ -47,16 +56,17 @@
 		box-shadow: 0px 0px 15px #526488;
 	}
 </style>
-<Header/>
 
-<div>
-<div class="main-buttons">
-	<button class="title" id="maps-button" on:click={clickMaps}>Maps <br> 地図</button>
-	<button class="title" id="writing-button" on:click={clickWriting}>Writing <br> 文章</button>
-</div>
-{#if clickedButton == 'maps'}
-	<Maps/>
-{:else if clickedButton =='writing'}
-	<Writing/>
-{/if}
+<div class="body">
+	<Header/>
+	<div class="main-buttons">
+		<button class="title" id="maps-button" on:click={clickMaps}>Maps <br> 地図</button>
+		<button class="title" id="writing-button" on:click={clickWriting}>Writing <br> 文章</button>
+	</div>
+	{#if clickedButton == 'maps'}
+		<Maps/>
+	{:else if clickedButton =='writing'}
+		<Writing/>
+	{/if}
+	<Footer/>
 </div>

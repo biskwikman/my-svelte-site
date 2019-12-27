@@ -4,6 +4,8 @@
     export let projectLink;
     export let titleEng;
     export let titleJpn;
+    export let codeRepoLink;
+    export let codeRepo;
 </script>
 
 <style>
@@ -69,6 +71,16 @@ p {
     opacity: 1;
 }
 
+.repo-link {
+    color: rgb(233, 233, 233);
+    font-size: 1em;
+    margin-top: 50px;
+}
+
+.repo-link:hover {
+    text-decoration: underline;
+}
+
 </style>
 
 <div class="card">
@@ -77,7 +89,7 @@ p {
             style="background-image: url({backgroundImage});
                 background-size: {backgroundSize}">
             <div class="overlay">
-                <div class="text-fade"><p>{titleEng}<p/><p>{titleJpn}</p></div>
+                <div class="text-fade"><p>{titleEng}<p/><p>{titleJpn}</p><a href={codeRepoLink}><p class="repo-link"><em>{codeRepo}</em></p></a></div>
             </div>
         </div>
     </a>
