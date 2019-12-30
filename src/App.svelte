@@ -2,6 +2,7 @@
 	import Header from './components/Header.svelte';
 	import Footer from './components/Footer.svelte';
 	import Writing from './components/Writing.svelte';
+	import Contact from './components/Contact.svelte';
 	import Maps from './components/Maps.svelte'
 	
 	let clickedButton = '';
@@ -12,6 +13,8 @@
 		document.getElementById('maps-button').style.color = 'white';
 		document.getElementById('writing-button').style.backgroundColor = 'white';
 		document.getElementById('writing-button').style.color = '#526488';
+		document.getElementById('contact-button').style.backgroundColor = 'white';
+		document.getElementById('contact-button').style.color = '#526488';
 	}
 	function clickWriting()	{
 		clickedButton = 'writing';
@@ -19,6 +22,17 @@
 		document.getElementById('maps-button').style.color = '#526488';
 		document.getElementById('writing-button').style.backgroundColor = '#526488';
 		document.getElementById('writing-button').style.color = 'white';
+		document.getElementById('contact-button').style.backgroundColor = 'white';
+		document.getElementById('contact-button').style.color = '#526488';
+	}
+	function clickContact() {
+		clickedButton = 'contact';
+		document.getElementById('maps-button').style.backgroundColor = 'white';
+		document.getElementById('maps-button').style.color = '#526488';
+		document.getElementById('writing-button').style.backgroundColor = 'white';
+		document.getElementById('writing-button').style.color = '#526488';
+		document.getElementById('contact-button').style.backgroundColor = '#526488';
+		document.getElementById('contact-button').style.color = 'white';
 	}
 </script>
 
@@ -62,11 +76,14 @@
 	<div class="main-buttons">
 		<button class="title" id="maps-button" on:click={clickMaps}>Maps <br> 地図</button>
 		<button class="title" id="writing-button" on:click={clickWriting}>Writing <br> 文章</button>
+		<button class="title" id="contact-button" on:click={clickContact}>Contact <br> 連絡</button>
 	</div>
 	{#if clickedButton == 'maps'}
 		<Maps/>
-	{:else if clickedButton =='writing'}
+	{:else if clickedButton == 'writing'}
 		<Writing/>
+	{:else if clickedButton == 'contact'}
+		<Contact/>
 	{/if}
 	<Footer/>
 </div>
