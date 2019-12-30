@@ -61,6 +61,8 @@
 		box-shadow: 2px 2px 10px #526488;
 		cursor: pointer;
 		width: calc(4em + 1vw);
+		display: flex;
+		justify-content: center;
 	}
 
 	button:active {
