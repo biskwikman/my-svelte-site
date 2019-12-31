@@ -14,10 +14,6 @@
         padding-right: 10vw;
   }
 
-  .items {
-    
-  }
-
   .contact {
         font-size: 1.2em;
   }

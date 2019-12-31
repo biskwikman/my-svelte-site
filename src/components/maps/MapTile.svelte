@@ -71,10 +71,13 @@ p {
     opacity: 1;
 }
 
+.project-title {
+    margin-bottom: 50px;
+}
+
 .repo-link {
     color: rgb(233, 233, 233);
     font-size: 1em;
-    margin-top: 50px;
 }
 
 .repo-link:hover {
@@ -89,7 +92,15 @@ p {
             style="background-image: url({backgroundImage});
                 background-size: {backgroundSize}">
             <div class="overlay">
-                <div class="text-fade"><p>{titleEng}<p/><p>{titleJpn}</p><a href={codeRepoLink}><p class="repo-link"><em>{codeRepo}</em></p></a></div>
+                <div class="text-fade">
+                    <div class="project-title">
+                        <p>{titleEng}<p/>
+                        <p>{titleJpn}</p>
+                    </div>
+                    <a href={codeRepoLink}>
+                        <p class="repo-link"><em>{codeRepo}</em></p>
+                    </a>
+                </div>
             </div>
         </div>
     </a>
