@@ -51,14 +51,14 @@
         codeRepo: 'Github Repo',
         codeRepoLink: 'https://github.com/biskwikman/immi-map-aus',
     };
-    const humeHousingProps = {
-        backgroundImage: 'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/hume-map.png',
-        projectLink: 'https://www.humehousingmap.org/',
-        titleEng: 'Hume Housing Change Map',
-        titleJpn: 'ヒューム市の住宅変更',
-        codeRepo: 'Github Repo',
-        codeRepoLink: 'https://github.com/humestrategicplanning/housing-strategy-2019',
-    };
+    // const humeHousingProps = {
+    //     backgroundImage: 'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/hume-map.png',
+    //     projectLink: 'https://www.humehousingmap.org/',
+    //     titleEng: 'Hume Housing Change Map',
+    //     titleJpn: 'ヒューム市の住宅変更',
+    //     codeRepo: 'Github Repo',
+    //     codeRepoLink: 'https://github.com/humestrategicplanning/housing-strategy-2019',
+    // };
     const japanInternalMigration = {
         backgroundImage: 'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/japan-internal-migration.png',
         projectLink: 'https://observablehq.com/@biskwikman/japan-intra-prefectural-migration-map',
@@ -88,6 +88,6 @@
     <MapTile {...jpnForeignProps}/>
     <MapTile {...jpnBigThree}/>
     <MapTile {...ausDetentionProps}/>
-    <MapTile {...humeHousingProps}/>
+    <!-- <MapTile {...humeHousingProps}/> -->
     <MapTile {...japanInternalMigration}/>
 </div>

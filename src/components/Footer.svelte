@@ -32,7 +32,7 @@
   <a href="https://observablehq.com/@biskwikman">
     <img src="https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/observable.png" alt="Observable symbol">
   </a>
-  <a href="https://twitter.com/biskwikman">
+  <!-- <a href="https://twitter.com/biskwikman">
     <img src="https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/twitter.png" alt="Twitter symbol">
-  </a>
+  </a> -->
 </div>

@@ -30,7 +30,7 @@
 </style>
 
 <div class="item-container" in:fly="{{ y: 200, duration: 1000 }}">
-    <div class="item">
+    <!-- <div class="item">
         <a href="https://magmagmagazine.com/yellow-peril-today/">
             <h1 class="title">Yellow Peril Today</h1>
             <p>Mag Mag - 2020.2.14 --- politics・政治</p>
@@ -41,7 +41,7 @@
             <h1 class="title">Australian Media's Obsession with "Overpopulation"</h1>
             <p>Mag Mag - 2019.12.29 --- politics・政治</p>
         </a>
-    </div>
+    </div> -->
     <div class="item">
         <a href="https://overland.org.au/2019/11/the-myth-of-the-most-successful-multicultural-country-in-the-world/">
             <h1 class="title">The Myth of 'The Most Successful Multicultural Country in the World'</h1>

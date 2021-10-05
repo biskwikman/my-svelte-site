@@ -25,11 +25,9 @@
       Contact/連絡： djosephhenri[at]gmail[dot]com
     </p>
     <hr>
+      <a href="https://observablehq.com/@biskwikman"><p>Observable</p></a>
     <p>
-      Hire me to do GIS or frontend work!
-    </p>
-    <p>
-      地理情報かフロントエンドのために私を雇う！
+      <a href="https://github.com/biskwikman"><p>Github</p></a>
     </p>
   </div>
 </div>
