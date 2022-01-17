@@ -26,14 +26,22 @@
         codeRepo: 'Github Repo',
         codeRepoLink: 'https://github.com/biskwikman/detroit-transport-access',
     };
-    const jpnForeignProps = {
-        backgroundImage:'https://github.com/biskwikman/jpn-non-citizen-map/raw/master/images/noncitizen-image.png',
-        projectLink: 'https://biskwikman.github.io/projects/jpn-noncitizen/',
-        titleEng: 'Japanese Citizenship Rates',
-        titleJpn: '日本国籍比率',
-        codeRepo: 'Github Repo',
-        codeRepoLink: 'https://github.com/biskwikman/jpn-non-citizen-map',
-    };
+    // const jpnForeignProps = {
+    //     backgroundImage:'https://github.com/biskwikman/jpn-non-citizen-map/raw/master/images/noncitizen-image.png',
+    //     projectLink: 'https://biskwikman.github.io/projects/jpn-noncitizen/',
+    //     titleEng: 'Japanese Citizenship Rates',
+    //     titleJpn: '日本国籍比率',
+    //     codeRepo: 'Github Repo',
+    //     codeRepoLink: 'https://github.com/biskwikman/jpn-non-citizen-map',
+    // };
+    const hongKong3dProps = {
+        backgroundImage:'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/Hong-Kong-render.jpg',
+        projectLink: 'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/Hong-Kong-render.jpg',
+        titleEng: 'Hong Kong Relief',
+        titleJpn: '香港起伏地図',
+        codeRepo: '',
+        codeRepoLink: '',
+    }
     const jpnBigThree = {
         backgroundImage:'https://live.staticflickr.com/7812/46638480575_1d3b6d2995_b.jpg',
         backgroundSize: '250%',
@@ -51,14 +59,6 @@
         codeRepo: 'Github Repo',
         codeRepoLink: 'https://github.com/biskwikman/immi-map-aus',
     };
-    // const humeHousingProps = {
-    //     backgroundImage: 'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/hume-map.png',
-    //     projectLink: 'https://www.humehousingmap.org/',
-    //     titleEng: 'Hume Housing Change Map',
-    //     titleJpn: 'ヒューム市の住宅変更',
-    //     codeRepo: 'Github Repo',
-    //     codeRepoLink: 'https://github.com/humestrategicplanning/housing-strategy-2019',
-    // };
     const japanInternalMigration = {
         backgroundImage: 'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/japan-internal-migration.png',
         projectLink: 'https://observablehq.com/@biskwikman/japan-intra-prefectural-migration-map',
@@ -85,9 +85,8 @@
     <MapTile {...toyotaDensityProps}/>
     <MapTile {...jpnAtlasProps}/>
     <MapTile {...detroitPovertyProps}/>
-    <MapTile {...jpnForeignProps}/>
+    <MapTile {...hongKong3dProps}/>
     <MapTile {...jpnBigThree}/>
     <MapTile {...ausDetentionProps}/>
-    <!-- <MapTile {...humeHousingProps}/> -->
     <MapTile {...japanInternalMigration}/>
 </div>
