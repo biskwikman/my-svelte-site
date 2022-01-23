@@ -35,7 +35,7 @@
     //     codeRepoLink: 'https://github.com/biskwikman/jpn-non-citizen-map',
     // };
     const hongKong3dProps = {
-        backgroundImage:'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/Hong-Kong-render.jpg',
+        backgroundImage:'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/Hong-Kong-render-small.jpg',
         projectLink: 'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/Hong-Kong-render.jpg',
         titleEng: 'Hong Kong Relief',
         titleJpn: '香港起伏地図',
