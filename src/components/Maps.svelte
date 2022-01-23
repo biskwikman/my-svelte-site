@@ -1,7 +1,10 @@
 <script>
     import MapTile from './maps/MapTile.svelte'
+    import HongKong from './maps/HongKong.svelte';
 
     import { fly } from 'svelte/transition';
+
+    let clickedMap;
 
     const toyotaDensityProps = {
         backgroundImage:'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/toyota-dens.png',
@@ -26,17 +29,9 @@
         codeRepo: 'Github Repo',
         codeRepoLink: 'https://github.com/biskwikman/detroit-transport-access',
     };
-    // const jpnForeignProps = {
-    //     backgroundImage:'https://github.com/biskwikman/jpn-non-citizen-map/raw/master/images/noncitizen-image.png',
-    //     projectLink: 'https://biskwikman.github.io/projects/jpn-noncitizen/',
-    //     titleEng: 'Japanese Citizenship Rates',
-    //     titleJpn: '日本国籍比率',
-    //     codeRepo: 'Github Repo',
-    //     codeRepoLink: 'https://github.com/biskwikman/jpn-non-citizen-map',
-    // };
     const hongKong3dProps = {
         backgroundImage:'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/Hong-Kong-render-small.jpg',
-        projectLink: 'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/Hong-Kong-render.jpg',
+        // projectLink: 'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/Hong-Kong-render.jpg',
         titleEng: 'Hong Kong Relief',
         titleJpn: '香港起伏地図',
         codeRepo: '',
@@ -67,6 +62,9 @@
         codeRepo: '',
     }
 
+    const clickedHongKong = () => {clickedMap = 'hong kong';}
+    const clickedBack = () => {clickedMap = null;}
+
 </script>
 
 <style>
@@ -82,11 +80,19 @@
 </style>
 
 <div class="item-container" in:fly="{{ y: 200, duration: 1000 }}">
+    {#if !clickedMap}
     <MapTile {...toyotaDensityProps}/>
     <MapTile {...jpnAtlasProps}/>
     <MapTile {...detroitPovertyProps}/>
+    <div on:click={clickedHongKong}>
     <MapTile {...hongKong3dProps}/>
+    </div>
     <MapTile {...jpnBigThree}/>
     <MapTile {...ausDetentionProps}/>
     <MapTile {...japanInternalMigration}/>
+    {:else if clickedMap = 'hong kong'}
+    <button on:click={clickedBack}>Back</button>
+    <HongKong/>
+    <button>Back</button>
+    {/if}
 </div>
