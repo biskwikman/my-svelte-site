@@ -63,7 +63,7 @@
     };
     const thisWebsite = {
         backgroundImage:'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/my-site.jpg',
-        backgroundSize: '140%',
+        backgroundSize: '141%',
         projectLink: 'https://github.com/biskwikman/my-svelte-site',
         titleEng: 'Github repo for this website',
         titleJpn: 'このサイトのGithubリポジトリ',
