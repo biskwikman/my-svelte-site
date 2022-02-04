@@ -76,7 +76,7 @@
 <div class="body">
 	<Header/>
 	<div class="main-buttons">
-		<button class="title" id="maps-button" on:click={clickMaps}>Maps <br> 地図</button>
+		<button class="title" id="maps-button" on:click={clickMaps}>Projects</button>
 		<button class="title" id="writing-button" on:click={clickWriting}>Writing <br> 文章</button>
 		<button class="title" id="contact-button" on:click={clickContact}>Contact <br> 連絡</button>
 	</div>
