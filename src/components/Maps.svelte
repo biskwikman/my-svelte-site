@@ -60,7 +60,16 @@
         titleEng: 'Japan Internal Migration',
         titleJpn: '日本国内純移動数',
         codeRepo: '',
-    }
+    };
+    const thisWebsite = {
+        backgroundImage:'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/my-site.jpg',
+        backgroundSize: '140%',
+        projectLink: 'https://github.com/biskwikman/my-svelte-site',
+        titleEng: 'Github repo for this website',
+        titleJpn: 'このサイトのGithubリポジトリ',
+        codeRepo: 'Github Repo',
+        codeRepoLink: 'https://github.com/biskwikman/my-svelte-site',
+    };
 
     const clickedHongKong = () => {clickedMap = 'hong kong';}
     const clickedBack = () => {clickedMap = null;}
@@ -89,6 +98,7 @@
     </div>
     <MapTile {...jpnBigThree}/>
     <MapTile {...ausDetentionProps}/>
+    <MapTile {...thisWebsite}/>
     <MapTile {...japanInternalMigration}/>
     {:else if clickedMap = 'hong kong'}
     <button on:click={clickedBack}>Back</button>

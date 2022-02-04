@@ -49,6 +49,12 @@
         </a>
     </div> -->
     <div class="item">
+        <a href="https://qiita.com/biskwikman/items/b0166f62b7a0a97f7dbb">
+            <h1 class="title">町丁ポリゴンから町域ポリゴンを作ろう！</h1>
+            <p>Qiita - 2020.10.28 --- tech・技術</p>
+        </a>
+    </div>
+    <div class="item">
         <a href="https://qiita.com/biskwikman/items/b09de2b470e1dabcaed2">
             <h1 class="title">pythonで東京の人口密度のちずを使いましょう！</h1>
             <p>Qiita - 2018.11.27 --- tech・技術</p>
