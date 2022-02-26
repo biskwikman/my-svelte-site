@@ -49,6 +49,12 @@
         </a>
     </div> -->
     <div class="item">
+        <a href="https://qiita.com/biskwikman/items/44bac5b4c1546624ddfe">
+            <h1 class="title">Install HashLink virtual machine for Haxe on Mac</h1>
+            <p>Qiita - 2022.02.25 --- tech・技術</p>
+        </a>
+    </div>
+    <div class="item">
         <a href="https://qiita.com/biskwikman/items/c7451b23f0d01b13ccbe">
             <h1 class="title">PostGIS functions speed comparison</h1>
             <p>Qiita - 2022.02.04 --- tech・技術</p>
