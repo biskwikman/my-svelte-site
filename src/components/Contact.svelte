@@ -22,7 +22,7 @@
 <div class="item-container" in:fly="{{ y: 200, duration: 1000 }}">
   <div class="items">
     <p class="contact">
-      Contact/連絡： djosephhenri[at]gmail[dot]com
+      djosephhenri[at]gmail[dot]com
     </p>
     <hr>
       <a href="https://observablehq.com/@biskwikman"><p>Observable</p></a>
