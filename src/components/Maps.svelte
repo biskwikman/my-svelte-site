@@ -6,6 +6,14 @@
 
     let clickedMap;
 
+    const chiba3dProps = {
+        backgroundImage:'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/chiba-low-res-shader-mix.jpg',
+        // projectLink: 'https://www.npmjs.com/package/jpn-atlas',
+        titleEng: 'Chiba Relief',
+        titleJpn: '千葉県起伏地図',
+        codeRepo:'',
+        codeRepoLink:'',
+    }
     const toyotaDensityProps = {
         backgroundImage:'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/toyota-dens.png',
         projectLink: 'https://medium.com/@djosephhenri/creating-a-population-density-map-of-toyota-city-japan-using-d3-geos-cli-and-some-other-stuff-705632a55e8f',
@@ -90,6 +98,7 @@
 
 <div class="item-container" in:fly="{{ y: 200, duration: 1000 }}">
     {#if !clickedMap}
+    <MapTile {...chiba3dProps}/>
     <MapTile {...toyotaDensityProps}/>
     <MapTile {...jpnAtlasProps}/>
     <MapTile {...detroitPovertyProps}/>
