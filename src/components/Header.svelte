@@ -23,5 +23,5 @@
 </style>
 
 <div class="Header">
-    <h1 class="header-title"><ruby><rb>Dan</rb><rt>ダン</rt> <rb>Henri</rb><rt>ヘンリー</rt></ruby></h1>
+    <h1 class="header-title"><ruby><rb>Dan</rb> <rb>Henri</rb></ruby></h1>
 </div>

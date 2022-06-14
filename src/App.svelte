@@ -5,36 +5,57 @@
 	import Contact from './components/Contact.svelte';
 	import Maps from './components/Maps.svelte'
 	
+	const unclickedBackgroundColor = 'white';
+	const unclickedTextColor = '#526488';
+	const clickedBackgroundColor = '#526488';
+	const clickedTextColor = 'white';
+
 	let clickedButton = '';
 
 	function clickMaps() {
-		clickedButton = 'maps';
-		document.getElementById('maps-button').style.backgroundColor = '#526488';
-		document.getElementById('maps-button').style.color = 'white';
-		document.getElementById('writing-button').style.backgroundColor = 'white';
-		document.getElementById('writing-button').style.color = '#526488';
-		document.getElementById('contact-button').style.backgroundColor = 'white';
-		document.getElementById('contact-button').style.color = '#526488';
+		clickedButton = 'maps-button';
+		clickButton();
 	}
 	function clickWriting()	{
-		clickedButton = 'writing';
-		document.getElementById('maps-button').style.backgroundColor = 'white';
-		document.getElementById('maps-button').style.color = '#526488';
-		document.getElementById('writing-button').style.backgroundColor = '#526488';
-		document.getElementById('writing-button').style.color = 'white';
-		document.getElementById('contact-button').style.backgroundColor = 'white';
-		document.getElementById('contact-button').style.color = '#526488';
+		clickedButton = 'writing-button';
+		clickButton();
 	}
 	function clickContact() {
-		clickedButton = 'contact';
-		document.getElementById('maps-button').style.backgroundColor = 'white';
-		document.getElementById('maps-button').style.color = '#526488';
-		document.getElementById('writing-button').style.backgroundColor = 'white';
-		document.getElementById('writing-button').style.color = '#526488';
-		document.getElementById('contact-button').style.backgroundColor = '#526488';
-		document.getElementById('contact-button').style.color = 'white';
+		clickedButton = 'contact-button';
+		clickButton();
+	}
+
+	function clickButton() {
+		const buttons = document.getElementsByClassName('title');
+		for (let i = 0; i < buttons.length; i++) {
+			if (buttons.item(i).id !== clickedButton) {
+				buttons.item(i).style.backgroundColor = unclickedBackgroundColor
+				buttons.item(i).style.color = unclickedTextColor
+			}
+			else {
+				buttons.item(i).style.backgroundColor = clickedBackgroundColor
+				buttons.item(i).style.color = clickedTextColor
+			}
+		}
 	}
 </script>
+
+<div class="body">
+	<Header/>
+	<div class="main-buttons">
+		<button class="title" id="maps-button" on:click={clickMaps}>Projects</button>
+		<button class="title" id="writing-button" on:click={clickWriting}>Writing</button>
+		<button class="title" id="contact-button" on:click={clickContact}>Contact</button>
+	</div>
+	{#if clickedButton === 'maps-button'}
+		<Maps/>
+	{:else if clickedButton === 'writing-button'}
+		<Writing/>
+	{:else if clickedButton === 'contact-button'}
+		<Contact/>
+	{/if}
+	<Footer/>
+</div>
 
 <style>
 
@@ -61,8 +82,10 @@
 		box-shadow: 2px 2px 10px #526488;
 		cursor: pointer;
 		width: calc(4em + 1vw);
+		height: 3.5em;
 		display: flex;
 		justify-content: center;
+		align-items: center;
 	}
 
 	button:active {
@@ -72,20 +95,3 @@
 		box-shadow: 0px 0px 15px #526488;
 	}
 </style>
-
-<div class="body">
-	<Header/>
-	<div class="main-buttons">
-		<button class="title" id="maps-button" on:click={clickMaps}>Projects <br> ー</button>
-		<button class="title" id="writing-button" on:click={clickWriting}>Writing <br> 文章</button>
-		<button class="title" id="contact-button" on:click={clickContact}>Contact <br> 連絡</button>
-	</div>
-	{#if clickedButton == 'maps'}
-		<Maps/>
-	{:else if clickedButton == 'writing'}
-		<Writing/>
-	{:else if clickedButton == 'contact'}
-		<Contact/>
-	{/if}
-	<Footer/>
-</div>
