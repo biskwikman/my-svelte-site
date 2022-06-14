@@ -1,6 +1,7 @@
 <script>
-    import MapTile from './maps/MapTile.svelte'
+    import MapTile from './maps/MapTile.svelte';
     import HongKong from './maps/HongKong.svelte';
+    import Chiba from './maps/Chiba.svelte';
 
     import { fly } from 'svelte/transition';
 
@@ -8,7 +9,6 @@
 
     const chiba3dProps = {
         backgroundImage:'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/chiba-low-res-shader-mix.jpg',
-        // projectLink: 'https://www.npmjs.com/package/jpn-atlas',
         titleEng: 'Chiba Relief',
         titleJpn: '千葉県起伏地図',
         codeRepo:'',
@@ -39,7 +39,6 @@
     };
     const hongKong3dProps = {
         backgroundImage:'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/Hong-Kong-render-small.jpg',
-        // projectLink: 'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/Hong-Kong-render.jpg',
         titleEng: 'Hong Kong Relief',
         titleJpn: '香港起伏地図',
         codeRepo: '',
@@ -80,6 +79,7 @@
     };
 
     const clickedHongKong = () => {clickedMap = 'hong kong';}
+    const clickedChiba = () => {clickedMap = 'chiba';}
     const clickedBack = () => {clickedMap = null;}
 
 </script>
@@ -98,20 +98,26 @@
 
 <div class="item-container" in:fly="{{ y: 200, duration: 1000 }}">
     {#if !clickedMap}
-    <MapTile {...chiba3dProps}/>
-    <MapTile {...toyotaDensityProps}/>
-    <MapTile {...jpnAtlasProps}/>
-    <MapTile {...detroitPovertyProps}/>
-    <div on:click={clickedHongKong}>
-    <MapTile {...hongKong3dProps}/>
-    </div>
-    <MapTile {...jpnBigThree}/>
-    <MapTile {...ausDetentionProps}/>
-    <MapTile {...thisWebsite}/>
-    <MapTile {...japanInternalMigration}/>
-    {:else if clickedMap = 'hong kong'}
-    <button on:click={clickedBack}>Back</button>
-    <HongKong/>
-    <button>Back</button>
+        <div on:click={clickedChiba}>
+            <MapTile {...chiba3dProps}/>
+        </div>
+        <MapTile {...toyotaDensityProps}/>
+        <MapTile {...jpnAtlasProps}/>
+        <MapTile {...detroitPovertyProps}/>
+        <div on:click={clickedHongKong}>
+            <MapTile {...hongKong3dProps}/>
+        </div>
+        <MapTile {...jpnBigThree}/>
+        <MapTile {...ausDetentionProps}/>
+        <MapTile {...thisWebsite}/>
+        <MapTile {...japanInternalMigration}/>
+    {:else if clickedMap == 'hong kong'}
+        <button on:click={clickedBack}>Back</button>
+        <HongKong/>
+        <button on:click={clickedBack}>Back</button>
+    {:else if clickedMap == 'chiba'}
+        <button on:click={clickedBack}>Back</button>
+        <Chiba/>
+        <button on:click={clickedBack}>Back</button>
     {/if}
 </div>
