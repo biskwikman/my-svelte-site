@@ -7,6 +7,15 @@
 
     let clickedMap;
 
+    const liberapayProps = {
+        backgroundImage:'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/liberapay-logo.svg',
+        projectLink: 'https://liberapay.com/',
+        titleEng: 'Liberapay team member',
+        titleJpn: 'Liberapayチームの一員',
+        codeRepo:'Github Repo',
+        codeRepoLink:'https://github.com/liberapay/liberapay.com',
+    };
+
     const chiba3dProps = {
         backgroundImage:'https://raw.githubusercontent.com/biskwikman/my-cdn/master/my-site/chiba-low-res-shader-mix.jpg',
         titleEng: 'Chiba Relief',
@@ -98,6 +107,7 @@
 
 <div class="item-container" in:fly="{{ y: 200, duration: 1000 }}">
     {#if !clickedMap}
+        <MapTile {...liberapayProps}/>
         <div on:click={clickedChiba}>
             <MapTile {...chiba3dProps}/>
         </div>
